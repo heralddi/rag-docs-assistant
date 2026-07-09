@@ -1,0 +1,30 @@
+{"question": "How do I paginate through all results from a list endpoint?", "source_file": "pagination.md", "heading": "Iterating through all pages"}
+{"question": "What is the maximum page size for list endpoints?", "source_file": "pagination.md", "heading": "Pagination parameters"}
+{"question": "How do I rotate an API key without downtime?", "source_file": "authentication.md", "heading": "Rotating keys"}
+{"question": "What are restricted API keys and when should I use them?", "source_file": "authentication.md", "heading": "Restricted keys"}
+{"question": "Which header carries the API key on each request?", "source_file": "authentication.md", "heading": "Authentication"}
+{"question": "What fields does an error response body contain?", "source_file": "errors.md", "heading": "Error response body"}
+{"question": "Which errors are safe to retry automatically?", "source_file": "errors.md", "heading": "Handling errors in code"}
+{"question": "What happens when I exceed the rate limit?", "source_file": "rate-limits.md", "heading": "When you are rate limited"}
+{"question": "How can I tell how many requests I have left in the current window?", "source_file": "rate-limits.md", "heading": "Rate limit headers"}
+{"question": "How do I verify the signature on a webhook delivery?", "source_file": "webhooks.md", "heading": "Verifying signatures"}
+{"question": "How long are failed webhook deliveries retried?", "source_file": "webhooks.md", "heading": "Delivery and retries"}
+{"question": "How do I register a new webhook endpoint?", "source_file": "webhooks.md", "heading": "Webhook endpoints"}
+{"question": "Can two customers have the same email address?", "source_file": "customers.md", "heading": "Create a customer"}
+{"question": "Why does deleting a customer return a 409?", "source_file": "customers.md", "heading": "Delete a customer"}
+{"question": "What does the past_due subscription status mean?", "source_file": "subscriptions.md", "heading": "Subscription statuses"}
+{"question": "How do I pause billing for a subscription?", "source_file": "subscriptions.md", "heading": "Pause and resume"}
+{"question": "What happens if I cancel a subscription in the middle of a billing period?", "source_file": "subscriptions.md", "heading": "Cancel a subscription"}
+{"question": "Why is there a delay before subscription invoices are finalized?", "source_file": "invoices.md", "heading": "Invoice statuses"}
+{"question": "What does finalizing an invoice actually do?", "source_file": "invoices.md", "heading": "Finalize an invoice"}
+{"question": "Should I void an invoice the customer has partially paid?", "source_file": "invoices.md", "heading": "Void an invoice"}
+{"question": "What does the authentication_required payment failure code mean?", "source_file": "payments.md", "heading": "Payment failure codes"}
+{"question": "How do I refund part of a payment?", "source_file": "payments.md", "heading": "Refund a payment"}
+{"question": "What happens when I issue a credit note against an invoice that was already paid?", "source_file": "credit-notes.md", "heading": "Issue a credit note"}
+{"question": "When should I use a credit note instead of a refund?", "source_file": "credit-notes.md", "heading": "When to use a credit note versus a refund"}
+{"question": "Why do my invoices show zero tax?", "source_file": "tax.md", "heading": "Tax registrations"}
+{"question": "How does a customer's VAT ID change tax calculation?", "source_file": "tax.md", "heading": "Customer tax IDs"}
+{"question": "What changed in API version 2026-05-01?", "source_file": "changelog.md", "heading": "2026-05-01"}
+{"question": "How do I report metered usage for a subscription item?", "source_file": "setting-up-usage-based-billing.md", "heading": "Step 3: report usage"}
+{"question": "How can I trigger a card_declined failure in test mode?", "source_file": "handling-failed-payments.md", "heading": "Testing the flow"}
+{"question": "What happens if I retry a POST request with the same idempotency key?", "source_file": "overview.md", "heading": "Idempotent requests"}

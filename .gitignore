@@ -1,0 +1,20 @@
+# Environments
+.venv/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Index artifacts
+.ragdocs_index/
+
+# Model caches
+.cache/
+models--*/
+
+# macOS
+.DS_Store
