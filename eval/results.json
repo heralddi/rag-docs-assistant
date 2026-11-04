@@ -1,260 +1,1190 @@
-[
-  {
-    "backend": "embed",
-    "num_questions": 30,
-    "hit@1": 0.7666666666666667,
-    "hit@3": 0.9,
-    "mrr@10": 0.8414285714285714,
-    "per_question": [
-      {
-        "question": "How do I paginate through all results from a list endpoint?",
-        "gold_rank": 7
-      },
-      {
-        "question": "What is the maximum page size for list endpoints?",
-        "gold_rank": 2
-      },
-      {
-        "question": "How do I rotate an API key without downtime?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What are restricted API keys and when should I use them?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Which header carries the API key on each request?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What fields does an error response body contain?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Which errors are safe to retry automatically?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What happens when I exceed the rate limit?",
-        "gold_rank": 2
-      },
-      {
-        "question": "How can I tell how many requests I have left in the current window?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How do I verify the signature on a webhook delivery?",
-        "gold_rank": 2
-      },
-      {
-        "question": "How long are failed webhook deliveries retried?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How do I register a new webhook endpoint?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Can two customers have the same email address?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Why does deleting a customer return a 409?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What does the past_due subscription status mean?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How do I pause billing for a subscription?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What happens if I cancel a subscription in the middle of a billing period?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Why is there a delay before subscription invoices are finalized?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What does finalizing an invoice actually do?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Should I void an invoice the customer has partially paid?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What does the authentication_required payment failure code mean?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How do I refund part of a payment?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What happens when I issue a credit note against an invoice that was already paid?",
-        "gold_rank": 3
-      },
-      {
-        "question": "When should I use a credit note instead of a refund?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Why do my invoices show zero tax?",
-        "gold_rank": 6
-      },
-      {
-        "question": "How does a customer's VAT ID change tax calculation?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What changed in API version 2026-05-01?",
-        "gold_rank": 10
-      },
-      {
-        "question": "How do I report metered usage for a subscription item?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How can I trigger a card_declined failure in test mode?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What happens if I retry a POST request with the same idempotency key?",
-        "gold_rank": 1
-      }
-    ]
-  },
-  {
-    "backend": "tfidf",
-    "num_questions": 30,
-    "hit@1": 0.5333333333333333,
-    "hit@3": 0.8333333333333334,
-    "mrr@10": 0.6983333333333334,
-    "per_question": [
-      {
-        "question": "How do I paginate through all results from a list endpoint?",
-        "gold_rank": null
-      },
-      {
-        "question": "What is the maximum page size for list endpoints?",
-        "gold_rank": 4
-      },
-      {
-        "question": "How do I rotate an API key without downtime?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What are restricted API keys and when should I use them?",
-        "gold_rank": 2
-      },
-      {
-        "question": "Which header carries the API key on each request?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What fields does an error response body contain?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Which errors are safe to retry automatically?",
-        "gold_rank": 4
-      },
-      {
-        "question": "What happens when I exceed the rate limit?",
-        "gold_rank": 3
-      },
-      {
-        "question": "How can I tell how many requests I have left in the current window?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How do I verify the signature on a webhook delivery?",
-        "gold_rank": 2
-      },
-      {
-        "question": "How long are failed webhook deliveries retried?",
-        "gold_rank": 5
-      },
-      {
-        "question": "How do I register a new webhook endpoint?",
-        "gold_rank": 2
-      },
-      {
-        "question": "Can two customers have the same email address?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Why does deleting a customer return a 409?",
-        "gold_rank": 4
-      },
-      {
-        "question": "What does the past_due subscription status mean?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How do I pause billing for a subscription?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What happens if I cancel a subscription in the middle of a billing period?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Why is there a delay before subscription invoices are finalized?",
-        "gold_rank": 2
-      },
-      {
-        "question": "What does finalizing an invoice actually do?",
-        "gold_rank": 2
-      },
-      {
-        "question": "Should I void an invoice the customer has partially paid?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What does the authentication_required payment failure code mean?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How do I refund part of a payment?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What happens when I issue a credit note against an invoice that was already paid?",
-        "gold_rank": 3
-      },
-      {
-        "question": "When should I use a credit note instead of a refund?",
-        "gold_rank": 1
-      },
-      {
-        "question": "Why do my invoices show zero tax?",
-        "gold_rank": 1
-      },
-      {
-        "question": "How does a customer's VAT ID change tax calculation?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What changed in API version 2026-05-01?",
-        "gold_rank": 2
-      },
-      {
-        "question": "How do I report metered usage for a subscription item?",
-        "gold_rank": 3
-      },
-      {
-        "question": "How can I trigger a card_declined failure in test mode?",
-        "gold_rank": 1
-      },
-      {
-        "question": "What happens if I retry a POST request with the same idempotency key?",
-        "gold_rank": 1
-      }
-    ]
-  }
-]
+{
+  "num_questions": 30,
+  "top_k": 10,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 0,
+  "backends": [
+    {
+      "backend": "embed",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "from_stored_run": true,
+      "num_questions": 30,
+      "hit@1": 0.7666666666666667,
+      "hit@1_ci95": [
+        0.5907167384187784,
+        0.8820761185551051
+      ],
+      "hit@3": 0.9,
+      "hit@3_ci95": [
+        0.7437891742081593,
+        0.9654001112526658
+      ],
+      "mrr@10": 0.8414285714285714,
+      "mrr@10_ci95": [
+        0.7288849206349207,
+        0.9388888888888888
+      ],
+      "per_question": [
+        {
+          "question": "How do I paginate through all results from a list endpoint?",
+          "gold_rank": 7
+        },
+        {
+          "question": "What is the maximum page size for list endpoints?",
+          "gold_rank": 2
+        },
+        {
+          "question": "How do I rotate an API key without downtime?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What are restricted API keys and when should I use them?",
+          "gold_rank": 1
+        },
+        {
+          "question": "Which header carries the API key on each request?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What fields does an error response body contain?",
+          "gold_rank": 1
+        },
+        {
+          "question": "Which errors are safe to retry automatically?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What happens when I exceed the rate limit?",
+          "gold_rank": 2
+        },
+        {
+          "question": "How can I tell how many requests I have left in the current window?",
+          "gold_rank": 1
+        },
+        {
+          "question": "How do I verify the signature on a webhook delivery?",
+          "gold_rank": 2
+        },
+        {
+          "question": "How long are failed webhook deliveries retried?",
+          "gold_rank": 1
+        },
+        {
+          "question": "How do I register a new webhook endpoint?",
+          "gold_rank": 1
+        },
+        {
+          "question": "Can two customers have the same email address?",
+          "gold_rank": 1
+        },
+        {
+          "question": "Why does deleting a customer return a 409?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What does the past_due subscription status mean?",
+          "gold_rank": 1
+        },
+        {
+          "question": "How do I pause billing for a subscription?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What happens if I cancel a subscription in the middle of a billing period?",
+          "gold_rank": 1
+        },
+        {
+          "question": "Why is there a delay before subscription invoices are finalized?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What does finalizing an invoice actually do?",
+          "gold_rank": 1
+        },
+        {
+          "question": "Should I void an invoice the customer has partially paid?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What does the authentication_required payment failure code mean?",
+          "gold_rank": 1
+        },
+        {
+          "question": "How do I refund part of a payment?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What happens when I issue a credit note against an invoice that was already paid?",
+          "gold_rank": 3
+        },
+        {
+          "question": "When should I use a credit note instead of a refund?",
+          "gold_rank": 1
+        },
+        {
+          "question": "Why do my invoices show zero tax?",
+          "gold_rank": 6
+        },
+        {
+          "question": "How does a customer's VAT ID change tax calculation?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What changed in API version 2026-05-01?",
+          "gold_rank": 10
+        },
+        {
+          "question": "How do I report metered usage for a subscription item?",
+          "gold_rank": 1
+        },
+        {
+          "question": "How can I trigger a card_declined failure in test mode?",
+          "gold_rank": 1
+        },
+        {
+          "question": "What happens if I retry a POST request with the same idempotency key?",
+          "gold_rank": 1
+        }
+      ]
+    },
+    {
+      "backend": "tfidf",
+      "from_stored_run": false,
+      "num_questions": 30,
+      "hit@1": 0.5333333333333333,
+      "hit@1_ci95": [
+        0.361422996198733,
+        0.6976761109230025
+      ],
+      "hit@3": 0.8333333333333334,
+      "hit@3_ci95": [
+        0.6643564949358398,
+        0.9266345762815145
+      ],
+      "mrr@10": 0.6983333333333334,
+      "mrr@10_ci95": [
+        0.5744444444444444,
+        0.815
+      ],
+      "per_question": [
+        {
+          "question": "How do I paginate through all results from a list endpoint?",
+          "gold_rank": null,
+          "top_ids": [
+            "pagination.md#filtering-and-list-order",
+            "pagination.md#the-list-envelope",
+            "pagination.md#pagination-parameters",
+            "pagination.md#pagination",
+            "webhooks.md#webhook-endpoints",
+            "changelog.md#2025-11-15",
+            "webhooks.md#delivery-and-retries",
+            "webhooks.md#webhooks",
+            "invoices.md#list-invoices",
+            "customers.md#list-customers"
+          ]
+        },
+        {
+          "question": "What is the maximum page size for list endpoints?",
+          "gold_rank": 4,
+          "top_ids": [
+            "pagination.md#pagination",
+            "rate-limits.md#reducing-your-request-volume",
+            "changelog.md#2025-11-15",
+            "pagination.md#pagination-parameters",
+            "pagination.md#filtering-and-list-order",
+            "pagination.md#the-list-envelope",
+            "overview.md#where-to-go-next",
+            "webhooks.md#webhook-endpoints",
+            "invoices.md#list-invoices",
+            "customers.md#list-customers"
+          ]
+        },
+        {
+          "question": "How do I rotate an API key without downtime?",
+          "gold_rank": 1,
+          "top_ids": [
+            "authentication.md#rotating-keys",
+            "authentication.md#authentication",
+            "authentication.md#api-key-types",
+            "authentication.md#machine-to-machine-checklist",
+            "overview.md#meridian-billing-api-overview",
+            "errors.md#http-status-codes",
+            "overview.md#idempotent-requests",
+            "webhooks.md#webhook-endpoints",
+            "changelog.md#changelog",
+            "errors.md#common-error-codes"
+          ]
+        },
+        {
+          "question": "What are restricted API keys and when should I use them?",
+          "gold_rank": 2,
+          "top_ids": [
+            "changelog.md#2025-11-15",
+            "authentication.md#restricted-keys",
+            "authentication.md#machine-to-machine-checklist",
+            "overview.md#meridian-billing-api-overview",
+            "overview.md#environments",
+            "overview.md#where-to-go-next",
+            "authentication.md#api-key-types",
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund",
+            "overview.md#idempotent-requests",
+            "authentication.md#authentication"
+          ]
+        },
+        {
+          "question": "Which header carries the API key on each request?",
+          "gold_rank": 1,
+          "top_ids": [
+            "authentication.md#authentication",
+            "overview.md#idempotent-requests",
+            "authentication.md#machine-to-machine-checklist",
+            "errors.md#http-status-codes",
+            "authentication.md#api-key-types",
+            "webhooks.md#verifying-signatures",
+            "authentication.md#rotating-keys",
+            "changelog.md#changelog",
+            "rate-limits.md#when-you-are-rate-limited",
+            "overview.md#meridian-billing-api-overview"
+          ]
+        },
+        {
+          "question": "What fields does an error response body contain?",
+          "gold_rank": 1,
+          "top_ids": [
+            "errors.md#error-response-body",
+            "customers.md#retrieve-a-customer",
+            "customers.md#update-a-customer",
+            "errors.md#errors",
+            "errors.md#getting-help",
+            "errors.md#http-status-codes",
+            "payments.md#refund-a-payment",
+            "webhooks.md#webhooks",
+            "overview.md#idempotent-requests",
+            "setting-up-usage-based-billing.md#step-2-subscribe-the-customer"
+          ]
+        },
+        {
+          "question": "Which errors are safe to retry automatically?",
+          "gold_rank": 4,
+          "top_ids": [
+            "errors.md#errors",
+            "rate-limits.md#when-you-are-rate-limited",
+            "payments.md#payment-failure-codes",
+            "errors.md#handling-errors-in-code",
+            "overview.md#idempotent-requests",
+            "invoices.md#invoices",
+            "rate-limits.md#retrying-safely",
+            "payments.md#payments",
+            "tax.md#tax",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed"
+          ]
+        },
+        {
+          "question": "What happens when I exceed the rate limit?",
+          "gold_rank": 3,
+          "top_ids": [
+            "rate-limits.md#rate-limit-headers",
+            "pagination.md#iterating-through-all-pages",
+            "rate-limits.md#when-you-are-rate-limited",
+            "setting-up-usage-based-billing.md#step-3-report-usage",
+            "rate-limits.md#rate-limits",
+            "rate-limits.md#default-limits",
+            "rate-limits.md#reducing-your-request-volume",
+            "credit-notes.md#issue-a-credit-note",
+            "tax.md#how-tax-is-calculated",
+            "errors.md#http-status-codes"
+          ]
+        },
+        {
+          "question": "How can I tell how many requests I have left in the current window?",
+          "gold_rank": 1,
+          "top_ids": [
+            "rate-limits.md#rate-limit-headers",
+            "rate-limits.md#default-limits",
+            "rate-limits.md#when-you-are-rate-limited",
+            "tax.md#tax",
+            "overview.md#api-versioning",
+            "authentication.md#authentication",
+            "customers.md#retrieve-a-customer",
+            "rate-limits.md#retrying-safely",
+            "errors.md#http-status-codes",
+            "invoices.md#invoice-statuses"
+          ]
+        },
+        {
+          "question": "How do I verify the signature on a webhook delivery?",
+          "gold_rank": 2,
+          "top_ids": [
+            "webhooks.md#handler-best-practices",
+            "webhooks.md#verifying-signatures",
+            "overview.md#where-to-go-next",
+            "webhooks.md#delivery-and-retries",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "setting-up-usage-based-billing.md#going-live",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "subscriptions.md#cancel-a-subscription"
+          ]
+        },
+        {
+          "question": "How long are failed webhook deliveries retried?",
+          "gold_rank": 5,
+          "top_ids": [
+            "payments.md#payment-statuses",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "subscriptions.md#subscription-statuses",
+            "webhooks.md#delivery-and-retries",
+            "payments.md#payment-failure-codes",
+            "overview.md#idempotent-requests",
+            "errors.md#handling-errors-in-code",
+            "webhooks.md#webhook-endpoints",
+            "webhooks.md#verifying-signatures"
+          ]
+        },
+        {
+          "question": "How do I register a new webhook endpoint?",
+          "gold_rank": 2,
+          "top_ids": [
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "webhooks.md#webhook-endpoints",
+            "subscriptions.md#update-a-subscription",
+            "pagination.md#filtering-and-list-order",
+            "subscriptions.md#cancel-a-subscription",
+            "overview.md#api-versioning",
+            "webhooks.md#delivery-and-retries",
+            "webhooks.md#webhooks",
+            "changelog.md#2025-06-20",
+            "setting-up-usage-based-billing.md#going-live"
+          ]
+        },
+        {
+          "question": "Can two customers have the same email address?",
+          "gold_rank": 1,
+          "top_ids": [
+            "customers.md#create-a-customer",
+            "customers.md#list-customers",
+            "customers.md#the-customer-object",
+            "tax.md#tax",
+            "customers.md#delete-a-customer",
+            "overview.md#request-format",
+            "customers.md#retrieve-a-customer",
+            "customers.md#customers",
+            "setting-up-usage-based-billing.md#prerequisites",
+            "customers.md#update-a-customer"
+          ]
+        },
+        {
+          "question": "Why does deleting a customer return a 409?",
+          "gold_rank": 4,
+          "top_ids": [
+            "customers.md#retrieve-a-customer",
+            "pagination.md#pagination",
+            "customers.md#update-a-customer",
+            "customers.md#delete-a-customer",
+            "errors.md#http-status-codes",
+            "pagination.md#cursor-stability",
+            "payments.md#refund-a-payment",
+            "pagination.md#filtering-and-list-order",
+            "customers.md#customers",
+            "changelog.md#2026-05-01"
+          ]
+        },
+        {
+          "question": "What does the past_due subscription status mean?",
+          "gold_rank": 1,
+          "top_ids": [
+            "subscriptions.md#subscription-statuses",
+            "subscriptions.md#pause-and-resume",
+            "customers.md#retrieve-a-customer",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "changelog.md#2026-05-01",
+            "invoices.md#list-invoices",
+            "subscriptions.md#cancel-a-subscription",
+            "errors.md#http-status-codes",
+            "authentication.md#machine-to-machine-checklist",
+            "webhooks.md#event-types"
+          ]
+        },
+        {
+          "question": "How do I pause billing for a subscription?",
+          "gold_rank": 1,
+          "top_ids": [
+            "subscriptions.md#pause-and-resume",
+            "subscriptions.md#subscriptions",
+            "subscriptions.md#subscription-statuses",
+            "subscriptions.md#cancel-a-subscription",
+            "changelog.md#2026-05-01",
+            "webhooks.md#event-types",
+            "overview.md#meridian-billing-api-overview",
+            "setting-up-usage-based-billing.md#step-2-subscribe-the-customer",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "overview.md#core-objects"
+          ]
+        },
+        {
+          "question": "What happens if I cancel a subscription in the middle of a billing period?",
+          "gold_rank": 1,
+          "top_ids": [
+            "subscriptions.md#cancel-a-subscription",
+            "subscriptions.md#subscriptions",
+            "invoices.md#invoices",
+            "subscriptions.md#pause-and-resume",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice",
+            "subscriptions.md#subscription-statuses",
+            "subscriptions.md#update-a-subscription",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "tax.md#customer-tax-ids",
+            "webhooks.md#event-types"
+          ]
+        },
+        {
+          "question": "Why is there a delay before subscription invoices are finalized?",
+          "gold_rank": 2,
+          "top_ids": [
+            "invoices.md#list-invoices",
+            "invoices.md#invoice-statuses",
+            "webhooks.md#event-types",
+            "subscriptions.md#subscriptions",
+            "invoices.md#invoices",
+            "subscriptions.md#cancel-a-subscription",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice",
+            "credit-notes.md#credit-notes",
+            "subscriptions.md#subscription-statuses",
+            "setting-up-usage-based-billing.md#step-2-subscribe-the-customer"
+          ]
+        },
+        {
+          "question": "What does finalizing an invoice actually do?",
+          "gold_rank": 2,
+          "top_ids": [
+            "errors.md#http-status-codes",
+            "invoices.md#finalize-an-invoice",
+            "customers.md#retrieve-a-customer",
+            "payments.md#refund-a-payment",
+            "rate-limits.md#retrying-safely",
+            "payments.md#create-a-payment",
+            "credit-notes.md#issue-a-credit-note",
+            "webhooks.md#event-types",
+            "invoices.md#void-an-invoice",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice"
+          ]
+        },
+        {
+          "question": "Should I void an invoice the customer has partially paid?",
+          "gold_rank": 1,
+          "top_ids": [
+            "invoices.md#void-an-invoice",
+            "payments.md#create-a-payment",
+            "credit-notes.md#void-a-credit-note",
+            "invoices.md#invoice-statuses",
+            "credit-notes.md#issue-a-credit-note",
+            "webhooks.md#event-types",
+            "invoices.md#the-invoice-object",
+            "credit-notes.md#credit-notes",
+            "customers.md#customers",
+            "invoices.md#create-an-invoice"
+          ]
+        },
+        {
+          "question": "What does the authentication_required payment failure code mean?",
+          "gold_rank": 1,
+          "top_ids": [
+            "payments.md#payment-failure-codes",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "payments.md#create-a-payment",
+            "customers.md#retrieve-a-customer",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "payments.md#refund-a-payment",
+            "authentication.md#machine-to-machine-checklist",
+            "payments.md#payment-statuses",
+            "errors.md#error-response-body",
+            "errors.md#http-status-codes"
+          ]
+        },
+        {
+          "question": "How do I refund part of a payment?",
+          "gold_rank": 1,
+          "top_ids": [
+            "payments.md#refund-a-payment",
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund",
+            "credit-notes.md#void-a-credit-note",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "credit-notes.md#credit-note-statuses",
+            "payments.md#payment-statuses",
+            "payments.md#payments",
+            "handling-failed-payments.md#step-3-retry-manually-after-the-customer-acts",
+            "credit-notes.md#issue-a-credit-note",
+            "payments.md#the-payment-object"
+          ]
+        },
+        {
+          "question": "What happens when I issue a credit note against an invoice that was already paid?",
+          "gold_rank": 3,
+          "top_ids": [
+            "invoices.md#void-an-invoice",
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund",
+            "credit-notes.md#issue-a-credit-note",
+            "payments.md#refund-a-payment",
+            "credit-notes.md#void-a-credit-note",
+            "credit-notes.md#credit-notes",
+            "webhooks.md#event-types",
+            "credit-notes.md#credit-note-statuses",
+            "invoices.md#finalize-an-invoice",
+            "credit-notes.md#the-credit-note-object"
+          ]
+        },
+        {
+          "question": "When should I use a credit note instead of a refund?",
+          "gold_rank": 1,
+          "top_ids": [
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund",
+            "credit-notes.md#void-a-credit-note",
+            "payments.md#refund-a-payment",
+            "credit-notes.md#credit-note-statuses",
+            "invoices.md#void-an-invoice",
+            "credit-notes.md#credit-notes",
+            "credit-notes.md#issue-a-credit-note",
+            "credit-notes.md#the-credit-note-object",
+            "invoices.md#finalize-an-invoice",
+            "rate-limits.md#reducing-your-request-volume"
+          ]
+        },
+        {
+          "question": "Why do my invoices show zero tax?",
+          "gold_rank": 1,
+          "top_ids": [
+            "tax.md#tax-registrations",
+            "tax.md#tax",
+            "tax.md#customer-tax-ids",
+            "invoices.md#list-invoices",
+            "tax.md#reading-tax-on-an-invoice",
+            "invoices.md#invoices",
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund",
+            "invoices.md#finalize-an-invoice",
+            "customers.md#the-customer-object",
+            "invoices.md#invoice-statuses"
+          ]
+        },
+        {
+          "question": "How does a customer's VAT ID change tax calculation?",
+          "gold_rank": 1,
+          "top_ids": [
+            "tax.md#customer-tax-ids",
+            "customers.md#retrieve-a-customer",
+            "tax.md#tax",
+            "tax.md#how-tax-is-calculated",
+            "tax.md#tax-registrations",
+            "customers.md#update-a-customer",
+            "customers.md#customers",
+            "customers.md#the-customer-object",
+            "rate-limits.md#reducing-your-request-volume",
+            "tax.md#reading-tax-on-an-invoice"
+          ]
+        },
+        {
+          "question": "What changed in API version 2026-05-01?",
+          "gold_rank": 2,
+          "top_ids": [
+            "overview.md#api-versioning",
+            "changelog.md#2026-05-01",
+            "changelog.md#changelog",
+            "overview.md#request-format",
+            "customers.md#update-a-customer",
+            "tax.md#tax-registrations",
+            "authentication.md#machine-to-machine-checklist",
+            "overview.md#meridian-billing-api-overview",
+            "subscriptions.md#the-subscription-object",
+            "invoices.md#the-invoice-object"
+          ]
+        },
+        {
+          "question": "How do I report metered usage for a subscription item?",
+          "gold_rank": 3,
+          "top_ids": [
+            "setting-up-usage-based-billing.md#step-2-subscribe-the-customer",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "setting-up-usage-based-billing.md#step-3-report-usage",
+            "setting-up-usage-based-billing.md#step-1-create-a-metered-price",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice",
+            "invoices.md#invoice-statuses",
+            "setting-up-usage-based-billing.md#going-live",
+            "subscriptions.md#create-a-subscription",
+            "subscriptions.md#cancel-a-subscription",
+            "webhooks.md#event-types"
+          ]
+        },
+        {
+          "question": "How can I trigger a card_declined failure in test mode?",
+          "gold_rank": 1,
+          "top_ids": [
+            "handling-failed-payments.md#testing-the-flow",
+            "overview.md#environments",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "errors.md#http-status-codes",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "payments.md#payments",
+            "payments.md#payment-failure-codes",
+            "setting-up-usage-based-billing.md#prerequisites",
+            "authentication.md#api-key-types",
+            "handling-failed-payments.md#step-3-retry-manually-after-the-customer-acts"
+          ]
+        },
+        {
+          "question": "What happens if I retry a POST request with the same idempotency key?",
+          "gold_rank": 1,
+          "top_ids": [
+            "overview.md#idempotent-requests",
+            "rate-limits.md#retrying-safely",
+            "errors.md#http-status-codes",
+            "errors.md#errors",
+            "errors.md#handling-errors-in-code",
+            "rate-limits.md#when-you-are-rate-limited",
+            "errors.md#common-error-codes",
+            "setting-up-usage-based-billing.md#step-3-report-usage",
+            "authentication.md#authentication",
+            "authentication.md#rotating-keys"
+          ]
+        }
+      ]
+    },
+    {
+      "backend": "bm25",
+      "from_stored_run": false,
+      "num_questions": 30,
+      "hit@1": 0.6333333333333333,
+      "hit@1_ci95": [
+        0.45513563654794875,
+        0.7812607919389928
+      ],
+      "hit@3": 0.9,
+      "hit@3_ci95": [
+        0.7437891742081593,
+        0.9654001112526658
+      ],
+      "mrr@10": 0.7594444444444445,
+      "mrr@10_ci95": [
+        0.6383333333333333,
+        0.8722222222222221
+      ],
+      "per_question": [
+        {
+          "question": "How do I paginate through all results from a list endpoint?",
+          "gold_rank": null,
+          "top_ids": [
+            "pagination.md#filtering-and-list-order",
+            "pagination.md#the-list-envelope",
+            "pagination.md#pagination-parameters",
+            "webhooks.md#webhook-endpoints",
+            "pagination.md#pagination",
+            "changelog.md#2025-11-15",
+            "webhooks.md#webhooks",
+            "webhooks.md#delivery-and-retries",
+            "customers.md#list-customers",
+            "invoices.md#list-invoices"
+          ]
+        },
+        {
+          "question": "What is the maximum page size for list endpoints?",
+          "gold_rank": 4,
+          "top_ids": [
+            "pagination.md#pagination",
+            "rate-limits.md#reducing-your-request-volume",
+            "changelog.md#2025-11-15",
+            "pagination.md#pagination-parameters",
+            "pagination.md#filtering-and-list-order",
+            "pagination.md#the-list-envelope",
+            "overview.md#where-to-go-next",
+            "webhooks.md#webhook-endpoints",
+            "customers.md#list-customers",
+            "invoices.md#list-invoices"
+          ]
+        },
+        {
+          "question": "How do I rotate an API key without downtime?",
+          "gold_rank": 1,
+          "top_ids": [
+            "authentication.md#rotating-keys",
+            "authentication.md#machine-to-machine-checklist",
+            "authentication.md#authentication",
+            "authentication.md#api-key-types",
+            "overview.md#idempotent-requests",
+            "errors.md#errors",
+            "errors.md#http-status-codes",
+            "overview.md#where-to-go-next",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "customers.md#create-a-customer"
+          ]
+        },
+        {
+          "question": "What are restricted API keys and when should I use them?",
+          "gold_rank": 1,
+          "top_ids": [
+            "authentication.md#restricted-keys",
+            "changelog.md#2025-11-15",
+            "authentication.md#machine-to-machine-checklist",
+            "authentication.md#api-key-types",
+            "overview.md#idempotent-requests",
+            "overview.md#environments",
+            "overview.md#meridian-billing-api-overview",
+            "overview.md#where-to-go-next",
+            "authentication.md#authentication",
+            "overview.md#api-versioning"
+          ]
+        },
+        {
+          "question": "Which header carries the API key on each request?",
+          "gold_rank": 3,
+          "top_ids": [
+            "overview.md#idempotent-requests",
+            "authentication.md#machine-to-machine-checklist",
+            "authentication.md#authentication",
+            "webhooks.md#verifying-signatures",
+            "rate-limits.md#when-you-are-rate-limited",
+            "errors.md#http-status-codes",
+            "overview.md#request-format",
+            "rate-limits.md#retrying-safely",
+            "errors.md#errors",
+            "changelog.md#changelog"
+          ]
+        },
+        {
+          "question": "What fields does an error response body contain?",
+          "gold_rank": 1,
+          "top_ids": [
+            "errors.md#error-response-body",
+            "errors.md#errors",
+            "errors.md#getting-help",
+            "errors.md#http-status-codes",
+            "customers.md#update-a-customer",
+            "customers.md#retrieve-a-customer",
+            "overview.md#idempotent-requests",
+            "errors.md#common-error-codes",
+            "payments.md#refund-a-payment",
+            "webhooks.md#webhooks"
+          ]
+        },
+        {
+          "question": "Which errors are safe to retry automatically?",
+          "gold_rank": 3,
+          "top_ids": [
+            "errors.md#errors",
+            "rate-limits.md#when-you-are-rate-limited",
+            "errors.md#handling-errors-in-code",
+            "payments.md#payment-failure-codes",
+            "overview.md#idempotent-requests",
+            "invoices.md#invoices",
+            "payments.md#payments",
+            "tax.md#tax",
+            "rate-limits.md#retrying-safely",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice"
+          ]
+        },
+        {
+          "question": "What happens when I exceed the rate limit?",
+          "gold_rank": 3,
+          "top_ids": [
+            "rate-limits.md#rate-limit-headers",
+            "pagination.md#iterating-through-all-pages",
+            "rate-limits.md#when-you-are-rate-limited",
+            "setting-up-usage-based-billing.md#step-3-report-usage",
+            "rate-limits.md#default-limits",
+            "rate-limits.md#reducing-your-request-volume",
+            "rate-limits.md#rate-limits",
+            "credit-notes.md#issue-a-credit-note",
+            "tax.md#how-tax-is-calculated",
+            "changelog.md#2025-11-15"
+          ]
+        },
+        {
+          "question": "How can I tell how many requests I have left in the current window?",
+          "gold_rank": 1,
+          "top_ids": [
+            "rate-limits.md#rate-limit-headers",
+            "rate-limits.md#default-limits",
+            "overview.md#api-versioning",
+            "tax.md#tax",
+            "rate-limits.md#when-you-are-rate-limited",
+            "authentication.md#authentication",
+            "customers.md#retrieve-a-customer",
+            "errors.md#http-status-codes",
+            "rate-limits.md#retrying-safely",
+            "invoices.md#invoice-statuses"
+          ]
+        },
+        {
+          "question": "How do I verify the signature on a webhook delivery?",
+          "gold_rank": 1,
+          "top_ids": [
+            "webhooks.md#verifying-signatures",
+            "webhooks.md#handler-best-practices",
+            "overview.md#where-to-go-next",
+            "webhooks.md#delivery-and-retries",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "setting-up-usage-based-billing.md#going-live",
+            "subscriptions.md#cancel-a-subscription"
+          ]
+        },
+        {
+          "question": "How long are failed webhook deliveries retried?",
+          "gold_rank": 2,
+          "top_ids": [
+            "payments.md#payment-statuses",
+            "webhooks.md#delivery-and-retries",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "webhooks.md#webhook-endpoints",
+            "subscriptions.md#subscription-statuses",
+            "overview.md#idempotent-requests",
+            "payments.md#payment-failure-codes",
+            "errors.md#handling-errors-in-code",
+            "setting-up-usage-based-billing.md#step-3-report-usage"
+          ]
+        },
+        {
+          "question": "How do I register a new webhook endpoint?",
+          "gold_rank": 1,
+          "top_ids": [
+            "webhooks.md#webhook-endpoints",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "subscriptions.md#cancel-a-subscription",
+            "subscriptions.md#update-a-subscription",
+            "overview.md#api-versioning",
+            "pagination.md#filtering-and-list-order",
+            "webhooks.md#webhooks",
+            "webhooks.md#delivery-and-retries",
+            "changelog.md#2025-06-20",
+            "handling-failed-payments.md#how-meridian-behaves-by-default"
+          ]
+        },
+        {
+          "question": "Can two customers have the same email address?",
+          "gold_rank": 1,
+          "top_ids": [
+            "customers.md#create-a-customer",
+            "customers.md#list-customers",
+            "tax.md#tax",
+            "overview.md#request-format",
+            "customers.md#the-customer-object",
+            "customers.md#delete-a-customer",
+            "customers.md#retrieve-a-customer",
+            "customers.md#customers",
+            "setting-up-usage-based-billing.md#prerequisites",
+            "webhooks.md#delivery-and-retries"
+          ]
+        },
+        {
+          "question": "Why does deleting a customer return a 409?",
+          "gold_rank": 3,
+          "top_ids": [
+            "customers.md#retrieve-a-customer",
+            "customers.md#update-a-customer",
+            "customers.md#delete-a-customer",
+            "errors.md#http-status-codes",
+            "pagination.md#pagination",
+            "pagination.md#cursor-stability",
+            "payments.md#refund-a-payment",
+            "pagination.md#filtering-and-list-order",
+            "changelog.md#2026-05-01",
+            "rate-limits.md#when-you-are-rate-limited"
+          ]
+        },
+        {
+          "question": "What does the past_due subscription status mean?",
+          "gold_rank": 1,
+          "top_ids": [
+            "subscriptions.md#subscription-statuses",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "customers.md#retrieve-a-customer",
+            "invoices.md#list-invoices",
+            "handling-failed-payments.md#step-2-customize-the-retry-schedule",
+            "errors.md#http-status-codes",
+            "subscriptions.md#pause-and-resume",
+            "authentication.md#machine-to-machine-checklist",
+            "subscriptions.md#the-subscription-object",
+            "payments.md#refund-a-payment"
+          ]
+        },
+        {
+          "question": "How do I pause billing for a subscription?",
+          "gold_rank": 1,
+          "top_ids": [
+            "subscriptions.md#pause-and-resume",
+            "subscriptions.md#subscriptions",
+            "subscriptions.md#subscription-statuses",
+            "changelog.md#2026-05-01",
+            "overview.md#core-objects",
+            "handling-failed-payments.md#step-2-customize-the-retry-schedule",
+            "overview.md#meridian-billing-api-overview",
+            "subscriptions.md#cancel-a-subscription",
+            "webhooks.md#event-types",
+            "handling-failed-payments.md#how-meridian-behaves-by-default"
+          ]
+        },
+        {
+          "question": "What happens if I cancel a subscription in the middle of a billing period?",
+          "gold_rank": 1,
+          "top_ids": [
+            "subscriptions.md#cancel-a-subscription",
+            "subscriptions.md#subscriptions",
+            "subscriptions.md#pause-and-resume",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice",
+            "invoices.md#invoices",
+            "subscriptions.md#update-a-subscription",
+            "setting-up-usage-based-billing.md#step-3-report-usage",
+            "subscriptions.md#subscription-statuses",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "overview.md#core-objects"
+          ]
+        },
+        {
+          "question": "Why is there a delay before subscription invoices are finalized?",
+          "gold_rank": 1,
+          "top_ids": [
+            "invoices.md#invoice-statuses",
+            "invoices.md#list-invoices",
+            "webhooks.md#event-types",
+            "credit-notes.md#credit-notes",
+            "subscriptions.md#subscriptions",
+            "setting-up-usage-based-billing.md#going-live",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice",
+            "invoices.md#finalize-an-invoice",
+            "subscriptions.md#subscription-statuses",
+            "changelog.md#2026-05-01"
+          ]
+        },
+        {
+          "question": "What does finalizing an invoice actually do?",
+          "gold_rank": 2,
+          "top_ids": [
+            "errors.md#http-status-codes",
+            "invoices.md#finalize-an-invoice",
+            "customers.md#retrieve-a-customer",
+            "payments.md#refund-a-payment",
+            "rate-limits.md#retrying-safely",
+            "payments.md#create-a-payment",
+            "credit-notes.md#issue-a-credit-note",
+            "invoices.md#void-an-invoice",
+            "webhooks.md#event-types",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice"
+          ]
+        },
+        {
+          "question": "Should I void an invoice the customer has partially paid?",
+          "gold_rank": 1,
+          "top_ids": [
+            "invoices.md#void-an-invoice",
+            "payments.md#create-a-payment",
+            "invoices.md#invoice-statuses",
+            "credit-notes.md#void-a-credit-note",
+            "credit-notes.md#credit-notes",
+            "webhooks.md#event-types",
+            "credit-notes.md#issue-a-credit-note",
+            "handling-failed-payments.md#step-4-decide-what-exhaustion-means-for-you",
+            "subscriptions.md#subscription-statuses",
+            "errors.md#http-status-codes"
+          ]
+        },
+        {
+          "question": "What does the authentication_required payment failure code mean?",
+          "gold_rank": 1,
+          "top_ids": [
+            "payments.md#payment-failure-codes",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "payments.md#create-a-payment",
+            "handling-failed-payments.md#how-meridian-behaves-by-default",
+            "customers.md#retrieve-a-customer",
+            "payments.md#refund-a-payment",
+            "errors.md#http-status-codes",
+            "authentication.md#machine-to-machine-checklist",
+            "errors.md#error-response-body",
+            "errors.md#handling-errors-in-code"
+          ]
+        },
+        {
+          "question": "How do I refund part of a payment?",
+          "gold_rank": 1,
+          "top_ids": [
+            "payments.md#refund-a-payment",
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund",
+            "credit-notes.md#void-a-credit-note",
+            "credit-notes.md#credit-note-statuses",
+            "credit-notes.md#issue-a-credit-note",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "payments.md#payment-statuses",
+            "payments.md#payments",
+            "payments.md#the-payment-object",
+            "handling-failed-payments.md#step-3-retry-manually-after-the-customer-acts"
+          ]
+        },
+        {
+          "question": "What happens when I issue a credit note against an invoice that was already paid?",
+          "gold_rank": 2,
+          "top_ids": [
+            "invoices.md#void-an-invoice",
+            "credit-notes.md#issue-a-credit-note",
+            "payments.md#refund-a-payment",
+            "credit-notes.md#credit-notes",
+            "credit-notes.md#void-a-credit-note",
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund",
+            "webhooks.md#event-types",
+            "credit-notes.md#credit-note-statuses",
+            "invoices.md#invoice-statuses",
+            "invoices.md#finalize-an-invoice"
+          ]
+        },
+        {
+          "question": "When should I use a credit note instead of a refund?",
+          "gold_rank": 1,
+          "top_ids": [
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund",
+            "credit-notes.md#void-a-credit-note",
+            "payments.md#refund-a-payment",
+            "invoices.md#void-an-invoice",
+            "credit-notes.md#credit-note-statuses",
+            "credit-notes.md#issue-a-credit-note",
+            "credit-notes.md#credit-notes",
+            "rate-limits.md#reducing-your-request-volume",
+            "overview.md#idempotent-requests",
+            "credit-notes.md#the-credit-note-object"
+          ]
+        },
+        {
+          "question": "Why do my invoices show zero tax?",
+          "gold_rank": 1,
+          "top_ids": [
+            "tax.md#tax-registrations",
+            "tax.md#tax",
+            "tax.md#customer-tax-ids",
+            "invoices.md#finalize-an-invoice",
+            "customers.md#the-customer-object",
+            "invoices.md#invoice-statuses",
+            "changelog.md#2025-06-20",
+            "tax.md#reading-tax-on-an-invoice",
+            "overview.md#meridian-billing-api-overview",
+            "credit-notes.md#when-to-use-a-credit-note-versus-a-refund"
+          ]
+        },
+        {
+          "question": "How does a customer's VAT ID change tax calculation?",
+          "gold_rank": 1,
+          "top_ids": [
+            "tax.md#customer-tax-ids",
+            "customers.md#retrieve-a-customer",
+            "tax.md#how-tax-is-calculated",
+            "customers.md#update-a-customer",
+            "rate-limits.md#reducing-your-request-volume",
+            "tax.md#tax-registrations",
+            "payments.md#refund-a-payment",
+            "tax.md#tax",
+            "customers.md#the-customer-object",
+            "errors.md#error-response-body"
+          ]
+        },
+        {
+          "question": "What changed in API version 2026-05-01?",
+          "gold_rank": 2,
+          "top_ids": [
+            "overview.md#api-versioning",
+            "changelog.md#2026-05-01",
+            "changelog.md#changelog",
+            "overview.md#request-format",
+            "tax.md#tax-registrations",
+            "customers.md#update-a-customer",
+            "authentication.md#machine-to-machine-checklist",
+            "subscriptions.md#the-subscription-object",
+            "overview.md#meridian-billing-api-overview",
+            "invoices.md#the-invoice-object"
+          ]
+        },
+        {
+          "question": "How do I report metered usage for a subscription item?",
+          "gold_rank": 5,
+          "top_ids": [
+            "setting-up-usage-based-billing.md#step-2-subscribe-the-customer",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "setting-up-usage-based-billing.md#step-4-verify-the-invoice",
+            "setting-up-usage-based-billing.md#step-1-create-a-metered-price",
+            "setting-up-usage-based-billing.md#step-3-report-usage",
+            "invoices.md#invoice-statuses",
+            "setting-up-usage-based-billing.md#going-live",
+            "subscriptions.md#create-a-subscription",
+            "overview.md#where-to-go-next",
+            "tax.md#how-tax-is-calculated"
+          ]
+        },
+        {
+          "question": "How can I trigger a card_declined failure in test mode?",
+          "gold_rank": 1,
+          "top_ids": [
+            "handling-failed-payments.md#testing-the-flow",
+            "overview.md#environments",
+            "handling-failed-payments.md#step-1-listen-for-paymentfailed",
+            "setting-up-usage-based-billing.md#guide-setting-up-usage-based-billing",
+            "errors.md#http-status-codes",
+            "payments.md#payment-failure-codes",
+            "payments.md#payments",
+            "setting-up-usage-based-billing.md#prerequisites",
+            "authentication.md#api-key-types",
+            "handling-failed-payments.md#step-3-retry-manually-after-the-customer-acts"
+          ]
+        },
+        {
+          "question": "What happens if I retry a POST request with the same idempotency key?",
+          "gold_rank": 1,
+          "top_ids": [
+            "overview.md#idempotent-requests",
+            "rate-limits.md#retrying-safely",
+            "errors.md#errors",
+            "errors.md#handling-errors-in-code",
+            "errors.md#http-status-codes",
+            "errors.md#common-error-codes",
+            "setting-up-usage-based-billing.md#step-3-report-usage",
+            "rate-limits.md#when-you-are-rate-limited",
+            "authentication.md#authentication",
+            "authentication.md#machine-to-machine-checklist"
+          ]
+        }
+      ]
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "a": "embed",
+      "b": "tfidf",
+      "hit@1_only_a": 8,
+      "hit@1_only_b": 1,
+      "mcnemar_exact_p": 0.0390625,
+      "rr_higher_a": 11,
+      "rr_higher_b": 2,
+      "rr_tied": 17,
+      "sign_test_exact_p": 0.0224609375
+    },
+    {
+      "a": "embed",
+      "b": "bm25",
+      "hit@1_only_a": 6,
+      "hit@1_only_b": 2,
+      "mcnemar_exact_p": 0.2890625,
+      "rr_higher_a": 9,
+      "rr_higher_b": 4,
+      "rr_tied": 17,
+      "sign_test_exact_p": 0.266845703125
+    },
+    {
+      "a": "tfidf",
+      "b": "bm25",
+      "hit@1_only_a": 1,
+      "hit@1_only_b": 4,
+      "mcnemar_exact_p": 0.375,
+      "rr_higher_a": 2,
+      "rr_higher_b": 8,
+      "rr_tied": 20,
+      "sign_test_exact_p": 0.109375
+    }
+  ]
+}
