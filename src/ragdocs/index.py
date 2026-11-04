@@ -12,7 +12,7 @@ from .ingest import Chunk
 
 DEFAULT_INDEX_DIR = Path(".ragdocs_index")
 EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-BACKENDS = ("embed", "tfidf")
+BACKENDS = ("embed", "tfidf", "bm25")
 
 
 def _chunk_texts(chunks: list[Chunk]) -> list[str]:
@@ -106,7 +106,77 @@ class TfidfIndex:
         return cls(chunks, vectorizer, matrix)
 
 
-_BACKEND_CLASSES = {"embed": EmbedIndex, "tfidf": TfidfIndex}
+def _bm25_weights(counts, k1: float, b: float):
+    """Okapi BM25 weight of every (chunk, term) pair in a sparse count matrix.
+
+    weight = idf * tf * (k1 + 1) / (tf + k1 * (1 - b + b * dl / avgdl)), where
+    idf = log(1 + (N - df + 0.5) / (df + 0.5)), dl is the chunk's length in
+    indexed tokens (after stop-word removal), and avgdl is the mean of dl.
+    """
+    from scipy import sparse
+
+    counts = sparse.coo_matrix(counts, dtype=np.float64)
+    n_chunks, n_terms = counts.shape
+    doc_len = np.asarray(counts.sum(axis=1)).ravel()
+    df = np.bincount(counts.col, minlength=n_terms)
+    idf = np.log1p((n_chunks - df + 0.5) / (df + 0.5))
+    tf = counts.data
+    length_norm = k1 * (1 - b + b * doc_len[counts.row] / doc_len.mean())
+    weights = idf[counts.col] * tf * (k1 + 1) / (tf + length_norm)
+    return sparse.csr_matrix((weights, (counts.row, counts.col)), shape=counts.shape)
+
+
+class BM25Index:
+    """Sparse retrieval: Okapi BM25 over unigram counts, k1 = 1.5 and b = 0.75.
+
+    Tokenization, lowercasing, and stop words are the same as the tfidf
+    backend. A chunk's score is the sum of its BM25 weights over the query's
+    terms, counted as often as they occur in the query.
+    """
+
+    backend = "bm25"
+    k1 = 1.5
+    b = 0.75
+
+    def __init__(self, chunks: list[Chunk], vectorizer, matrix):
+        self.chunks = chunks
+        self.vectorizer = vectorizer
+        self.matrix = matrix  # BM25 term weights, sparse (n_chunks, vocab)
+
+    @classmethod
+    def build(cls, chunks: list[Chunk]) -> BM25Index:
+        from sklearn.feature_extraction.text import CountVectorizer
+
+        vectorizer = CountVectorizer(stop_words="english")
+        counts = vectorizer.fit_transform(_chunk_texts(chunks))
+        return cls(chunks, vectorizer, _bm25_weights(counts, cls.k1, cls.b))
+
+    def search(self, query: str, k: int = 5) -> list[tuple[Chunk, float]]:
+        query_counts = self.vectorizer.transform([query])
+        scores = (self.matrix @ query_counts.T).toarray().ravel()
+        # BM25 gives exact ties to chunks that match the same terms equally often
+        # and have the same length; a stable sort keeps them in corpus order.
+        top = np.argsort(-scores, kind="stable")[:k]
+        return [(self.chunks[i], float(scores[i])) for i in top]
+
+    def save(self, index_dir: Path) -> None:
+        import joblib
+        from scipy import sparse
+
+        joblib.dump(self.vectorizer, index_dir / "bm25_vectorizer.joblib")
+        sparse.save_npz(index_dir / "bm25_weights.npz", self.matrix)
+
+    @classmethod
+    def load(cls, index_dir: Path, chunks: list[Chunk]) -> BM25Index:
+        import joblib
+        from scipy import sparse
+
+        vectorizer = joblib.load(index_dir / "bm25_vectorizer.joblib")
+        matrix = sparse.load_npz(index_dir / "bm25_weights.npz")
+        return cls(chunks, vectorizer, matrix)
+
+
+_BACKEND_CLASSES = {"embed": EmbedIndex, "tfidf": TfidfIndex, "bm25": BM25Index}
 
 
 def _load_embed_model():
@@ -115,13 +185,15 @@ def _load_embed_model():
     return SentenceTransformer(EMBED_MODEL)
 
 
-def build_index(chunks: list[Chunk], backend: str) -> EmbedIndex | TfidfIndex:
+def build_index(chunks: list[Chunk], backend: str) -> EmbedIndex | TfidfIndex | BM25Index:
     if backend not in _BACKEND_CLASSES:
         raise ValueError(f"Unknown backend {backend!r}, expected one of {BACKENDS}")
     return _BACKEND_CLASSES[backend].build(chunks)
 
 
-def save_index(index: EmbedIndex | TfidfIndex, index_dir: str | Path = DEFAULT_INDEX_DIR) -> None:
+def save_index(
+    index: EmbedIndex | TfidfIndex | BM25Index, index_dir: str | Path = DEFAULT_INDEX_DIR
+) -> None:
     index_dir = Path(index_dir)
     index_dir.mkdir(parents=True, exist_ok=True)
     _save_chunks(index.chunks, index_dir / "chunks.jsonl")
@@ -131,7 +203,7 @@ def save_index(index: EmbedIndex | TfidfIndex, index_dir: str | Path = DEFAULT_I
     index.save(index_dir)
 
 
-def load_index(index_dir: str | Path = DEFAULT_INDEX_DIR) -> EmbedIndex | TfidfIndex:
+def load_index(index_dir: str | Path = DEFAULT_INDEX_DIR) -> EmbedIndex | TfidfIndex | BM25Index:
     index_dir = Path(index_dir)
     meta_path = index_dir / "meta.json"
     if not meta_path.exists():
